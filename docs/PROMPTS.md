@@ -1,3 +1,8 @@
+<!--
+ Note from technikhighknee: These prompts do not represent the true prompts I vision in this system. 
+ OK for now, but will change later on (prob. through my own hands).  
+-->
+
 # Prompt Examples for Codex-Hive
 
 These examples show how to interact with a Codex-based system that uses the Hive structure. They are starting points – adapt them to your project and policies.
