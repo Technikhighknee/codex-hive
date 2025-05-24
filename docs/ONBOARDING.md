@@ -9,7 +9,7 @@ This guide explains how to adapt this repository when creating your own Codex-ba
 Clone this repository or use it as a template. It provides the basic structure for a role-aware Codex system.
 
 ```
-$ git clone <your fork>
+$ git clone https://github.com/Technikhighknee/codex-hive/
 ```
 
 ## 2. Review the Core Files
@@ -25,17 +25,9 @@ Understand these before changing anything.
 
 Create or edit `codex/direction.md` to capture your project's intent. Keep it concise and focused on goals, modules, and documentation expectations.
 
-## 4. Track Progress
-
-Every meaningful change should be logged in `codex/progress.md` using the format defined there. This log is the project's memory.
-
-## 5. Customize Roles if Needed
+## 4. Customize Roles if Needed
 
 Role files live under `codex/roles/`. Update them only if your project requires different responsibilities or behaviors.
-
-## 6. Document for Humans
-
-Add or update files in `docs/` to teach future contributors how to interact with your system. Link to them from `README.md` where appropriate.
 
 ---
 
