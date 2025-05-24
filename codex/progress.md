@@ -5,3 +5,7 @@
 [updated] README.md – linked onboarding guide
 [reviewed] codex/direction.md – still aligned with repository goals
 [reviewed] codex/roles/ – definitions adequate
+[added] docs/PROMPTS.md – prompt examples for role activation
+[updated] README.md – linked new prompts guide
+[revised] docs/PROMPTS.md – deeper examples for realistic workflow
+

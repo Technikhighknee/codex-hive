@@ -26,6 +26,7 @@ Codex-hive does not run code for you. It provides the scaffolding so humans can 
 - `codex/` – policies, direction, and memory for the agents
 - `codex/roles/` – individual role definitions
 - `docs/` – human-facing guides and examples (see `docs/ONBOARDING.md`)
+- `docs/PROMPTS.md` – sample prompts for activating roles
 - `LICENSE.lic` – released under the Unlicense
 
 Use `docs/direction.example.md` as inspiration for your own project direction. Log every meaningful change to `codex/progress.md` as you build.
