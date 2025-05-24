@@ -27,6 +27,7 @@ Codex-hive does not run code for you. It provides the scaffolding so humans can 
 - `codex/roles/` – individual role definitions
 - `docs/` – human-facing guides and examples (see `docs/ONBOARDING.md`)
 - `docs/PROMPTS.md` – sample prompts for interacting with Codex roles
+- `docs/RESPONSIBLE_USE.md` – guidelines for safe and responsible use
 - `LICENSE.lic` – released under the Unlicense
 
 Use `docs/direction.example.md` as inspiration for your own project direction. Log every meaningful change to `codex/progress.md` as you build.
@@ -47,5 +48,6 @@ Use the provided script to scaffold a new project based on codex-hive:
 ```
 
 See `docs/CLI_INIT.md` for details.
+Review `docs/RESPONSIBLE_USE.md` to understand safety expectations.
 
 
