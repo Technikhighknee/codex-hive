@@ -23,3 +23,7 @@
 ---
 - [added] docs/WORKFLOW.md – summarized typical process
 - [updated] README.md – linked workflow guide
+---
+- [added] dump-context.js – script to generate repository context dump
+- [added] test/dump-context.test.js – verifies context dump output
+- [added] package.json – npm initialization for context script
