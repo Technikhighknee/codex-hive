@@ -1,3 +1,16 @@
+<!-- 
+  TO THE AGENT:
+  THIS FILE IS ONLY A DRAFT
+  IT IS NOT YET PART OF YOUR INNER STRUCTURE.
+-->
+
+# Note from technikhighkne
+- I see this as a draft.  
+- I will work out actual processes in the near future.
+- This file exists, so that I dont forget about the topic.
+
+---
+
 # Codex System Process
 
 This file defines the core operational process of Codex-Hive.  

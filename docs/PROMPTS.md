@@ -1,14 +1,18 @@
-<!--
- Note from technikhighknee: OK for now, but will change later on (prob. through my own hands).  
--->
-
+# Notes from technikhighknee
+- This file is OK for now, but will change later on (prob. through my own hands).
+- Side note: "Act as the full Codex team as defined in AGENTS.md." feels like an important part, in every prompt.  
+  Even if you prompt to a specific role.  
+  I dont know, if prompting to specific roles, currently respects the full set of agents.  
+  Maybe we can "fix" this by finding a prompt, that methaphorically lets you speak to a single role, while all other roles are "in the same room".
+---
 # Prompt Examples for Codex-Hive
 
-These examples show how to interact with a Codex-based system that uses the Hive structure. They are starting points – adapt them to your project and policies.
+These examples show how to interact with a Codex-based system that uses the Hive structure.  
+They are starting points – adapt them to your project and policies.
 
 ---
 
-## 1. Let Codex follow codex/directions.md
+## 1. Let Codex follow codex/directions.md (change to fit your own needs)
 
 ```
 Act as the full Codex team as defined in AGENTS.md.
