@@ -10,3 +10,9 @@
 
 - [added] docs/PROMPTS.md – sample role activation prompts
 - [updated] README.md – referenced PROMPTS guide
+---
+- [added] cli/init.sh – minimal script to scaffold new Codex projects
+- [added] docs/CLI_INIT.md – usage guide for the init script
+- [updated] README.md – added Quick Start section referencing CLI guide
+
+

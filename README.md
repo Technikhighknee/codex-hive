@@ -37,3 +37,15 @@ Use `docs/direction.example.md` as inspiration for your own project direction. L
 
 Codex-hive is an independent, open-source project. It is **not affiliated with OpenAI** and carries no official endorsement. The name "Codex" references OpenAI's technology but does not imply partnership.
 
+
+## Quick Start
+
+Use the provided script to scaffold a new project based on codex-hive:
+
+```bash
+./cli/init.sh my-new-project
+```
+
+See `docs/CLI_INIT.md` for details.
+
+
