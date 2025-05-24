@@ -20,3 +20,5 @@
 - [updated] README.md – linked responsible use guide
 - [added] docs/ROLES_OVERVIEW.md – summarized purpose of each agent
 - [updated] README.md – listed roles overview doc
+- [added] docs/WORKFLOW.md – summarized typical process
+- [updated] README.md – linked workflow guide
