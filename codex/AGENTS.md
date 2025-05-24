@@ -24,7 +24,7 @@ It allows Codex to remember **why** a system exists – not just what it does.
 - `AGENTS.md` – this file: the team, its mindset, and how it operates
 - `policy.md` – rules of engagement: what this project values and enforces
 - `progress.md` – an ongoing log of decisions, changes, and agent activity
-- `release-plan.md` – the current working definition of what “done” means
+- `direction.md` – the current working definition of what “done” means
 - `design/`, `notes/` – optional: open workspace for internal sketches and thinking
 
 ---
