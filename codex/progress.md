@@ -7,3 +7,6 @@
 ---
 - [reviewed] codex/direction.md – still aligned with repository goals
 - [reviewed] codex/roles/ – definitions adequate
+
+- [added] docs/PROMPTS.md – sample role activation prompts
+- [updated] README.md – referenced PROMPTS guide
