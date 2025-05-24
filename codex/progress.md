@@ -16,3 +16,5 @@
 - [updated] README.md – added Quick Start section referencing CLI guide
 
 
+- [added] docs/RESPONSIBLE_USE.md – guidance on safe and responsible use
+- [updated] README.md – linked responsible use guide
