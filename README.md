@@ -27,6 +27,7 @@ Codex-hive does not run code for you. It provides the scaffolding so humans can 
 - `codex/roles/` – individual role definitions
 - `docs/` – human-facing guides and examples (see `docs/ONBOARDING.md`)
 - `docs/PROMPTS.md` – sample prompts for interacting with Codex roles
+- `docs/ROLES_OVERVIEW.md` – quick summary of all agent roles
 - `docs/RESPONSIBLE_USE.md` – guidelines for safe and responsible use
 - `LICENSE.lic` – released under the Unlicense
 

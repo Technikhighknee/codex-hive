@@ -18,3 +18,5 @@
 
 - [added] docs/RESPONSIBLE_USE.md – guidance on safe and responsible use
 - [updated] README.md – linked responsible use guide
+- [added] docs/ROLES_OVERVIEW.md – summarized purpose of each agent
+- [updated] README.md – listed roles overview doc
