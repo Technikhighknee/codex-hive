@@ -2,16 +2,20 @@
   "name": "codex-hive",
   "version": "0.1.0",
   "description": "A starter environment for building **role-aware** systems with OpenAI Codex. This repository contains the structure, policies, and documentation needed to spin up a new project where Codex operates as a team of agents.",
-  "directories": {
-    "doc": "docs"
+  "author": "Jason Posch <technikhighknee>",
+  "license": "Unlicense",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technikhighknee/codex-hive.git"
   },
   "scripts": {
     "test": "vitest run",
     "dump": "dump-for-context"
   },
-  "author": "Technikhighknee",
-  "license": "UNLICENSED",
-  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
   "devDependencies": {
     "dump-for-context": "^1.0.2",
     "vitest": "^3.1.4"
