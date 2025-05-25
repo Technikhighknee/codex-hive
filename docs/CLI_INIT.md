@@ -13,7 +13,7 @@ This repository includes a minimal script to scaffold a new Codex-based project.
 cli/init.sh <target-directory>
 ```
 
-The script copies the `codex/` and `docs/` folders, along with `README.md` and `LICENSE.lic`, into the target directory. Use it when you want a quick starting point.
+The script copies the `codex/` and `docs/` folders, along with `README.md`, into the target directory. Use it when you want a quick starting point.
 
 After running the script:
 

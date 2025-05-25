@@ -48,3 +48,9 @@
 ---
 - [human] [refactor] published dump-context as npm package 'dump-for-context' and imported it into this repo
 ---
+[codex] [updated] test/dump-context.test.js – import from dump-for-context package
+[codex] [fixed] README.md – corrected license filename
+[codex] [fixed] docs/CLI_INIT.md – removed outdated license instructions
+---
+[codex] [removed] test/dump-context.test.js – covered by dump-for-context package
+[codex] [removed] vitest dependency – no local tests remaining
