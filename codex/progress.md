@@ -44,3 +44,7 @@
 - [human] [improved] codex/direction.md – clarified that LICENSE.lic will not be copied by init script
 - [human] [fixed] codex/AGENTS.md – missing roles directory reference  
 ---
+- [human] [chore] renamed LICENSE.lic to UNLICENSE
+---
+- [human] [refactor] published dump-context as npm package 'dump-for-context' and imported it into this repo
+---
