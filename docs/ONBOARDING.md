@@ -1,6 +1,7 @@
 # Getting Started with Codex-Hive
 
 This guide explains how to adapt this repository when creating your own Codex-based project.
+Codex-hive does not include OpenAI's Codex model. It is a template for organizing projects that make use of that technology.
 
 ---
 

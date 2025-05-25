@@ -40,7 +40,9 @@ Use `docs/direction.example.md` as inspiration for your own project direction. L
 
 ## Disclaimer
 
-Codex-hive is an independent, open-source project. It is **not affiliated with OpenAI** and carries no official endorsement. The name "Codex" references OpenAI's technology but does not imply partnership.
+Codex-hive is an independent, open-source project. It is **not affiliated with OpenAI** and carries no official endorsement.
+The name "Codex" references OpenAI's technology but does not imply partnership, nor does this repository contain the Codex model itself.
+Codex-hive only provides scaffolding for projects that wish to use Codex in a role-aware way.
 
 
 ## Quick Start

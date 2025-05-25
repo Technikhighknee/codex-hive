@@ -66,3 +66,8 @@
 - [codex] [updated] docs/CONTEXT_DUMP.md – clarified dump is for other LLMs
 - [codex] [updated] README.md – noted dump usage with external models
 
+- [codex] [updated] README.md – clarified Codex-hive is scaffolding, not the Codex model
+- [codex] [updated] docs/RESPONSIBLE_USE.md – added note differentiating project from OpenAI Codex
+- [codex] [updated] docs/ONBOARDING.md – explained lack of bundled model
+- [codex] [removed] URGENT_TODO_FOR_AGENT.md – disclaimer addressed
+
