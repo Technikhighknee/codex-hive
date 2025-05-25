@@ -1,5 +1,5 @@
 # SCHEMA
-[player] [action] [DOMAIN or FILE] – [message]
+- [player] [action] [DOMAIN or FILE] – [message]
 
 # Progress-Log
 - [codex] [modified] AGENTS configuration – modularized role files and introduced Frontman, Guardian, Planner
@@ -48,14 +48,16 @@
 ---
 - [human] [refactor] published dump-context as npm package 'dump-for-context' and imported it into this repo
 ---
-[codex] [updated] test/dump-context.test.js – import from dump-for-context package
-[codex] [fixed] README.md – corrected license filename
-[codex] [fixed] docs/CLI_INIT.md – removed outdated license instructions
+- [codex] [updated] test/dump-context.test.js – import from dump-for-context package
+- [codex] [fixed] README.md – corrected license filename
+- [codex] [fixed] docs/CLI_INIT.md – removed outdated license instructions
 ---
-[codex] [removed] test/dump-context.test.js – covered by dump-for-context package
-[codex] [removed] vitest dependency – no local tests remaining
+- [codex] [removed] test/dump-context.test.js – covered by dump-for-context package
+- [codex] [removed] vitest dependency – no local tests remaining
 ---
-[codex] [added] docs/AGENT_CONTAINER_SETUP.md – instructions for container setup
-[codex] [updated] docs/ONBOARDING.md – added dependency installation step
-[codex] [updated] README.md – referenced container setup doc and install guidance
-[codex] [removed] TODO.md – documentation note addressed
+- [codex] [added] docs/AGENT_CONTAINER_SETUP.md – instructions for container setup
+- [codex] [updated] docs/ONBOARDING.md – added dependency installation step
+- [codex] [updated] README.md – referenced container setup doc and install guidance
+- [codex] [removed] TODO.md – documentation note addressed
+---
+- [human] [fix] made clear in codex/progress.md schema, that each change should start with a '-'
