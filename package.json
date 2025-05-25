@@ -9,6 +9,9 @@
     "test": "vitest run",
     "context:dump": "node dump-context.js"
   },
+  "bin": {
+    "create-codex-hive": "./cli/create.js"
+  },
   "author": "Technikhighknee",
   "license": "UNLICENSED",
   "type": "module",

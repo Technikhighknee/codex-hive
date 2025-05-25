@@ -43,10 +43,12 @@ Codex-hive is an independent, open-source project. It is **not affiliated with O
 
 ## Quick Start
 
-Use the provided script to scaffold a new project based on codex-hive:
+Use the Node-based CLI to scaffold a new project:
 
 ```bash
-./cli/init.sh my-new-project
+npx create-codex-hive my-new-project
+cd my-new-project
+npm install
 ```
 
 See `docs/CLI_INIT.md` for details.

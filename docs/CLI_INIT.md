@@ -1,19 +1,24 @@
 # Note from technikhighknee
-- Do not actually use this yet.  
-  It is just a stub, and will change **a lot**.  
-- The first actual way to create the scaffolding with a CLI  
-  will utilize npm/npx.
+- This guide now reflects the initial Node-based CLI.
+- It may still change, but you can try it locally.
 
-# Codex-Hive CLI [STUB]
+# Codex-Hive CLI
 
 
 This repository includes a minimal script to scaffold a new Codex-based project.
 
 ```
-cli/init.sh <target-directory>
+npx create-codex-hive <target-directory>
 ```
 
-The script copies the `codex/` and `docs/` folders, along with `README.md` and `LICENSE.lic`, into the target directory. Use it when you want a quick starting point.
+The command copies the `codex/` and `docs/` folders, along with `README.md` and `LICENSE.lic`, into the target directory. Use it when you want a quick starting point.
+
+Change into your new project and install dependencies:
+
+```bash
+cd <target-directory>
+npm install
+```
 
 After running the script:
 

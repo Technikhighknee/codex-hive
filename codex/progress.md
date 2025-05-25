@@ -40,3 +40,11 @@
 ---
 - [human] [extended] codex/direction.md – added "Interpreting This Direction" to guide Codex behavior in the absence of prompts
 ---
+- [codex] [added] cli/create.js – Node CLI for project scaffolding
+- [codex] [updated] package.json – registered create-codex-hive binary
+- [codex] [updated] docs/CLI_INIT.md – documented Node CLI usage
+- [codex] [updated] README.md – Quick Start uses Node CLI
+- [codex] [updated] docs/ONBOARDING.md – documented `npm install` and container setup
+- [codex] [updated] docs/CLI_INIT.md – added dependency install step
+- [codex] [updated] README.md – Quick Start installs dependencies
+---

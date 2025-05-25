@@ -10,6 +10,8 @@ Clone this repository or use it as a template. It provides the basic structure f
 
 ```
 $ git clone https://github.com/Technikhighknee/codex-hive/
+$ cd codex-hive
+$ npm install
 ```
 
 ## 2. Review the Core Files
@@ -32,3 +34,5 @@ Role files live under `codex/roles/`. Update them only if your project requires 
 ---
 
 Codex-Hive is a starting point. Shape it to fit your project, keep the history clear, and let each file explain why it exists.
+
+**Container users**: If you run Codex inside a container (for example, a `codex/agent` container), include `npm install` in the container's start script so dependencies like the CLI and tests are available.
