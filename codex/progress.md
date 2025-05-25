@@ -37,3 +37,6 @@
 - [human] [refactored] dump-context.js – outputFile, ignoredDirs and languageMap:{extention:markdown-code-name} are easier passable and configurable
 - [human] [refactored] dump-context.js – replaced line checks with block-level parsing in tests 
 - [human] [improved] dump-context.test.js – cleaner test structure, validates all blocks
+---
+- [human] [extended] codex/direction.md – added "Interpreting This Direction" to guide Codex behavior in the absence of prompts
+---
