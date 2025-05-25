@@ -31,6 +31,7 @@ Codex-hive does not run code for you. It provides the scaffolding so humans can 
 - `docs/RESPONSIBLE_USE.md` – guidelines for safe and responsible use
 - `docs/WORKFLOW.md` – step-by-step view of how agents collaborate
 - `docs/AGENT_CONTAINER_SETUP.md` – how to prepare a containerized environment
+- `docs/CONTEXT_DUMP.md` – generate a markdown snapshot other LLMs can consume
  - `UNLICENSE` – released under the Unlicense
 
 Use `docs/direction.example.md` as inspiration for your own project direction. Log every meaningful change to `codex/progress.md` as you build.
@@ -54,5 +55,6 @@ See `docs/CLI_INIT.md` for details.
 Review `docs/RESPONSIBLE_USE.md` to understand safety expectations.
 Refer to `docs/WORKFLOW.md` for the typical flow of tasks.
 Run `npm install` before starting the agents so required packages are available.
+Run `npm run dump` any time you need a fresh `context-dump.md` for analysis with external models.
 
 

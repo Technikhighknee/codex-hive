@@ -60,4 +60,9 @@
 - [codex] [updated] README.md – referenced container setup doc and install guidance
 - [codex] [removed] TODO.md – documentation note addressed
 ---
-- [human] [fix] made clear in codex/progress.md schema, that each change should start with a '-'
+- [human] [fix] made clear in codex/progress.md schema, that each change should start with a "-"
+- [codex] [added] docs/CONTEXT_DUMP.md – instructions for generating repository context
+- [codex] [updated] README.md – referenced context dump guide
+- [codex] [updated] docs/CONTEXT_DUMP.md – clarified dump is for other LLMs
+- [codex] [updated] README.md – noted dump usage with external models
+
