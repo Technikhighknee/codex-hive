@@ -6,9 +6,13 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "node test/dump-context.test.js"
+    "test": "vitest run",
+    "context:dump": "node dump-context.js"
   },
-
   "author": "Technikhighknee",
-  "type": "module"
+  "license": "UNLICENSED",
+  "type": "module",
+  "devDependencies": {
+    "vitest": "^3.1.4"
+  }
 }
