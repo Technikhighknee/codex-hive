@@ -71,3 +71,4 @@
 - [codex] [updated] docs/ONBOARDING.md – explained lack of bundled model
 - [codex] [removed] URGENT_TODO_FOR_AGENT.md – disclaimer addressed
 
+- [codex] [refactored] docs – centralized index and cross-links from README and ONBOARDING

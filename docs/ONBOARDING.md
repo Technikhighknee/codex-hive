@@ -27,7 +27,7 @@ all Node-based tools are available. See
 - `codex/policy.md` – rules each agent follows
 - `docs/direction.example.md` – example project direction
 
-Understand these before changing anything.
+Understand these before changing anything. See [`docs/README.md`](README.md) for a full list of available guides.
 
 ## 4. Define Your Direction
 
