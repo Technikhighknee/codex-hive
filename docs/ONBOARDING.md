@@ -12,7 +12,14 @@ Clone this repository or use it as a template. It provides the basic structure f
 $ git clone https://github.com/Technikhighknee/codex-hive/
 ```
 
-## 2. Review the Core Files
+## 2. Install Dependencies
+
+Run `npm install` in the project root. If you run Codex inside a
+container, make sure the container's start script executes this command so
+all Node-based tools are available. See
+`docs/AGENT_CONTAINER_SETUP.md` for a short setup guide.
+
+## 3. Review the Core Files
 
 - `codex/AGENTS.md` – overview of the team mindset
 - `codex/direction.md` – philosophy and system goals
@@ -21,11 +28,11 @@ $ git clone https://github.com/Technikhighknee/codex-hive/
 
 Understand these before changing anything.
 
-## 3. Define Your Direction
+## 4. Define Your Direction
 
 Create or edit `codex/direction.md` to capture your project's intent. Keep it concise and focused on goals, modules, and documentation expectations.
 
-## 4. Customize Roles if Needed
+## 5. Customize Roles if Needed
 
 Role files live under `codex/roles/`. Update them only if your project requires different responsibilities or behaviors.
 

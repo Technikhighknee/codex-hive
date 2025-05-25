@@ -54,3 +54,8 @@
 ---
 [codex] [removed] test/dump-context.test.js – covered by dump-for-context package
 [codex] [removed] vitest dependency – no local tests remaining
+---
+[codex] [added] docs/AGENT_CONTAINER_SETUP.md – instructions for container setup
+[codex] [updated] docs/ONBOARDING.md – added dependency installation step
+[codex] [updated] README.md – referenced container setup doc and install guidance
+[codex] [removed] TODO.md – documentation note addressed
