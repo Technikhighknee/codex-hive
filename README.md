@@ -41,10 +41,10 @@ Codex-hive only provides scaffolding for projects that wish to use Codex in a ro
 
 ## Quick Start
 
-Use the provided script to scaffold a new project based on codex-hive:
+Use the npm initializer to scaffold a new project based on codex-hive:
 
 ```bash
-./cli/init.sh my-new-project
+npm create codex-hive@latest my-new-project
 ```
 
 See `docs/CLI_INIT.md` for details.
