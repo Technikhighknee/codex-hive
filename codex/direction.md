@@ -43,6 +43,7 @@ It guides what will.
    - `create-codex-hive` package published on npm  
    - Users run `npm create codex-hive@latest <target>` to scaffold a project  
    - Supports interactive prompts or quick defaults for `direction.md`  
+   - IMPORTANT: Does not copy the licence file over!
 
 4. **Safety Infrastructure**  
    - Guidelines and constraints that prevent unreviewed or dangerous commits  

@@ -22,10 +22,12 @@ It allows Codex to remember **why** a system exists – not just what it does.
 ## Structure
 
 - `AGENTS.md` – this file: the team, its mindset, and how it operates
+- `roles/` - directory with role definitions, one file per role
 - `policy.md` – rules of engagement: what this project values and enforces
 - `progress.md` – an ongoing log of decisions, changes, and agent activity
 - `direction.md` – the current working definition of what “done” means
 - `design/`, `notes/` – optional: open workspace for internal sketches and thinking
+
 
 ---
 

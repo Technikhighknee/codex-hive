@@ -40,3 +40,7 @@
 ---
 - [human] [extended] codex/direction.md – added "Interpreting This Direction" to guide Codex behavior in the absence of prompts
 ---
+- [human] [updated] cli/init.sh – does not copy LICENSE.lic anymore  
+- [human] [improved] codex/direction.md – clarified that LICENSE.lic will not be copied by init script
+- [human] [fixed] codex/AGENTS.md – missing roles directory reference  
+---

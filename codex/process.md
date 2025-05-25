@@ -79,4 +79,3 @@ If Guardian approves:
 - No role may act outside its scope.
 - No change is valid without at least one logged action.
 - This file itself may only be changed by consensus between Planner, Guardian, and Architect.
-

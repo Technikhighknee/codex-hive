@@ -20,7 +20,6 @@ mkdir -p "$TARGET_DIR"
 cp -r codex "$TARGET_DIR/"
 cp -r docs "$TARGET_DIR/"
 cp README.md "$TARGET_DIR/"
-cp LICENSE.lic "$TARGET_DIR/"
 
 cat <<'MSG'
 Project scaffold created.
