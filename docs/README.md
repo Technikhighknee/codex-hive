@@ -8,7 +8,7 @@ This index lists the human-facing guides bundled with this repository. Use it to
 
 - [ONBOARDING.md](ONBOARDING.md) – how to adapt codex-hive for your own project
 - [AGENT_CONTAINER_SETUP.md](AGENT_CONTAINER_SETUP.md) – minimal steps for running in a container
-- [CLI_INIT.md](CLI_INIT.md) – stub instructions for the scaffold script
+- [CLI_INIT.md](CLI_INIT.md) – how to scaffold a new project
 
 ## Working With Codex
 

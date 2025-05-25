@@ -74,3 +74,10 @@
 - [codex] [refactored] docs – centralized index and cross-links from README and ONBOARDING
 - [codex] [added] docs/DOCUMENTATION_PROCESS.md – documentation workflow guide
 - [codex] [updated] docs/README.md – referenced documentation process guide
+---
+- [codex] [added] cli/create-codex-hive.js – Node-based project initializer
+- [codex] [updated] package.json – renamed package and added CLI bin
+- [codex] [updated] package-lock.json – updated for new package name
+- [codex] [updated] docs/CLI_INIT.md – document npm-based initializer
+- [codex] [updated] README.md – quick start uses npm initializer
+- [codex] [updated] docs/README.md – updated CLI guide description
