@@ -10,14 +10,12 @@
     "url": "git+https://github.com/technikhighknee/codex-hive.git"
   },
   "scripts": {
-    "test": "vitest run",
     "dump": "dump-for-context"
   },
   "directories": {
     "doc": "docs"
   },
   "devDependencies": {
-    "dump-for-context": "^1.0.2",
-    "vitest": "^3.1.4"
+    "dump-for-context": "^1.0.2"
   }
 }
