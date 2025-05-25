@@ -72,3 +72,5 @@
 - [codex] [removed] URGENT_TODO_FOR_AGENT.md – disclaimer addressed
 
 - [codex] [refactored] docs – centralized index and cross-links from README and ONBOARDING
+- [codex] [added] docs/DOCUMENTATION_PROCESS.md – documentation workflow guide
+- [codex] [updated] docs/README.md – referenced documentation process guide

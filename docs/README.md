@@ -16,6 +16,7 @@ This index lists the human-facing guides bundled with this repository. Use it to
 - [PROMPTS.md](PROMPTS.md) – example prompts for interacting with the system
 - [ROLES_OVERVIEW.md](ROLES_OVERVIEW.md) – summary of each agent role
 - [CONTEXT_DUMP.md](CONTEXT_DUMP.md) – generating a repository context snapshot
+- [DOCUMENTATION_PROCESS.md](DOCUMENTATION_PROCESS.md) – how to maintain the docs
 
 ## Safety
 
