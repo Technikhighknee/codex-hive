@@ -1,16 +1,14 @@
 {
   "name": "codex-hive",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A starter environment for building **role-aware** systems with OpenAI Codex. This repository contains the structure, policies, and documentation needed to spin up a new project where Codex operates as a team of agents.",
-  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/dump-context.test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+
+  "author": "Technikhighknee",
+  "type": "module"
 }
