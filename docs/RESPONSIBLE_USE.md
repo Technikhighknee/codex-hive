@@ -10,4 +10,7 @@ Follow these guidelines to keep your project safe and transparent:
 4. **Respect Privacy** – Do not store sensitive personal data in this repository unless you have explicit consent and clear retention policies.
 5. **Stay Within Scope** – If the project direction changes drastically, update `codex/direction.md` and review all policies.
 
+6. **Remember What This Is** – Codex-hive is a scaffold for working with OpenAI's Codex. It does not contain the Codex model and should never be presented as such.
+
 Codex-Hive provides structure, but you remain responsible for how it is used.
+
