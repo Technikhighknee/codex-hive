@@ -1,0 +1,1 @@
+- Add to documentation: 'The codex/agent container must run \'npm install\' in it's start-script' 
