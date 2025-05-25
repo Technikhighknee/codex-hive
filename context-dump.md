@@ -96,34 +96,6 @@ Refer to them whenever a perspective is needed.
 This file is for Codex. It sets the baseline for how the team thinks and acts.
 ```
 
-// File: LICENSE.lic
-```txt
-This is free and unencumbered software released into the public domain.
-
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
-
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
-
-For more information, please refer to <https://unlicense.org/>
-```
-
 // File: README.md
 ```md
 # codex-hive - WIP
@@ -187,6 +159,34 @@ Refer to `docs/WORKFLOW.md` for the typical flow of tasks.
 // File: TODO.md
 ```md
 - Add to documentation: 'The codex/agent container must run \'npm install\' in it's start-script' 
+```
+
+// File: UNLICENSE
+```
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <https://unlicense.org/>
 ```
 
 // File: cli/init.sh
@@ -1194,145 +1194,24 @@ It is not about remembering everything.
 It is about **capturing what mattered.**
 ```
 
-// File: dump-context.js
+// File: dump.config.js
 ```js
-/** 
- * Generate a context dump of the current codebase.
- * This script recursively collects all files in the current directory,
- * formats them with language-specific syntax highlighting,
- * and writes them to a file named `context-dump.md`.
- * The output is structured to be easily readable and usable as context for language models. 
-*/
-
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-/**
- * Generate a context dump of the current codebase.
- * 
- * @param {string} rootDir – the base directory
- * @param {object} options – optional config:
- *   {
- *     outputFile: string,
- *     ignoredDirs: string[],
- *     languageMap: Record<string, string>
- *   }
- */
-export function generateContextDump(rootDir = process.cwd(), options = {}) {
-  const {
-    outputFile = 'context-dump.md',
-    ignoredDirs = ['.git', 'node_modules'],
-    languageMap = {
-      js: 'js',
-      ts: 'ts',
-      json: 'json',
-      md: 'md',
-      sh: 'bash',
-      yml: 'yaml',
-      yaml: 'yaml',
-      txt: 'txt',
-      lic: 'txt',
-    },
-  } = options;
-
-  const IGNORED = new Set(ignoredDirs);
-
-  const collectFiles = (dir, collected = []) => {
-    const entries = fs.readdirSync(dir, { withFileTypes: true })
-      .sort((a, b) => a.name.localeCompare(b.name));
-
-    for (const entry of entries) {
-      const full = path.join(dir, entry.name);
-      if (entry.isDirectory()) {
-        if (!IGNORED.has(entry.name)) {
-          collectFiles(full, collected);
-        }
-      } else if (entry.isFile()) {
-        const rel = path.relative(rootDir, full);
-        if (rel === outputFile) continue;
-        collected.push(full);
-      }
-    }
-    return collected;
-  };
-
-  const formatFileContent = (filePath) => {
-    const relPath = path.relative(rootDir, filePath).split(path.sep).join('/');
-    const ext = path.extname(filePath).slice(1);
-    const lang = languageMap[ext] || '';
-
-    const header = `// File: ${relPath}`;
-    const fence = '```' + lang;
-    let body = fs.readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
-    if (body.endsWith('\n')) body = body.slice(0, -1);
-
-    return [header, fence, body, '```', ''].join('\n');
-  };
-
-  const files = collectFiles(rootDir);
-  const content = files.sort().map(formatFileContent).join('\n');
-  fs.writeFileSync(path.join(rootDir, outputFile), content);
+export default {
+  rootDir: process.cwd(),
+  outputFile: 'context-dump.md',
+  ignoredDirs: ['.git', 'node_modules'],
+  languageMap: {
+    js: 'js',
+    ts: 'ts',
+    json: 'json',
+    md: 'md',
+    sh: 'bash',
+    yml: 'yaml',
+    yaml: 'yaml',
+    txt: 'txt',
+    lic: 'txt',
+  }
 }
-
-// CLI entrypoint
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-if (process.argv[1] === __filename) {
-  generateContextDump(__dirname);
-}
-```
-
-// File: git-history-dump.md
-```md
-��< ! - -  
-     T O D O :   A d d   d u m p - g i t - h i s t o r y   a n d   d u m p - a l l   ( o r   s i m i l a r )   s c r i p t s  
-     ' g i t   l o g   - - p r e t t y = f o r m a t : " -   [ % h ]   % a d   -   % s "   - - d a t e = s h o r t   >   g i t - h i s t o r y - d u m p . m d '   w a s   u s e d   f o r   t h i s  
- - - >  
-  
- -   [ 0 f 9 d 0 0 2 ]   2 0 2 5 - 0 5 - 2 5   � � �   U p d a t e   W O R K F L O W . m d  
- -   [ 3 7 c e b d e ]   2 0 2 5 - 0 5 - 2 5   � � �   A d d   N o t e   f o r   a g e n t s   i n   d o c s / d i r e c t i o n . e x a m p l e . m d  
- -   [ 5 8 3 6 1 2 b ]   2 0 2 5 - 0 5 - 2 5   � � �   U p d a t e   p a c k a g e . j s o n  
- -   [ a 8 2 4 2 a 3 ]   2 0 2 5 - 0 5 - 2 5   � � �   M e r g e   u p d a t e   o f   d i r e c t i o n . m d   t o   u s e   n p m   c r e a t e   w h e n   s c a f f o l d i n g  
- -   [ 5 a f 1 8 d c ]   2 0 2 5 - 0 5 - 2 5   � � �   d o c s :   u p d a t e   d i r e c t i o n   f o r   n p m   c l i  
- -   [ c 5 a e c 3 5 ]   2 0 2 5 - 0 5 - 2 4   � � �   M e r g e d   d u m p   s c r i p t   t o   g i v e   o t h e r   a g e n t s   ( l i k e   G P T )   c o n t e x t .  
- -   [ 9 3 1 a 4 1 b ]   2 0 2 5 - 0 5 - 2 4   � � �   A d d   c o n t e x t   d u m p   g e n e r a t o r   a n d   t e s t s  
- -   [ 8 a e f 8 d f ]   2 0 2 5 - 0 5 - 2 4   � � �   U p d a t e   O N B O A R D I N G . m d  
- -   [ d 4 c 0 2 7 a ]   2 0 2 5 - 0 5 - 2 4   � � �   U p d a t e   C L I _ I N I T . m d   t o   c l a r i f y   s t u b   s t a t u s   a n d   f u t u r e   c h a n g e s  
- -   [ 9 9 5 a 2 b c ]   2 0 2 5 - 0 5 - 2 4   � � �   U p d a t e   d r a f t   d o c u m e n t a t i o n   a n d   a d d   n o t e s   f o r   f u t u r e   i m p r o v e m e n t s  
- -   [ b e b b 8 6 4 ]   2 0 2 5 - 0 5 - 2 4   � � �   R e f i n e   p r o m p t   e x a m p l e s   a n d   c l a r i f y   C o d e x   r o l e s   a n d   r e s p o n s i b i l i t i e s  
- -   [ 8 a 7 a 4 4 0 ]   2 0 2 5 - 0 5 - 2 4   � � �   m e r g e d   w o r k f l o w   d o c u m e n t a t i o n   d r a f t  
- -   [ 3 0 7 3 0 2 6 ]   2 0 2 5 - 0 5 - 2 4   � � �   A d d   w o r k f l o w   g u i d e  
- -   [ b 4 5 f f 5 4 ]   2 0 2 5 - 0 5 - 2 4   � � �   M e r g e d   c o d e x   b r a n c h   -   " A d d   r o l e s   o v e r v i e w "  
- -   [ c 6 6 8 7 f f ]   2 0 2 5 - 0 5 - 2 4   � � �   A d d   r o l e s   o v e r v i e w  
- -   [ 7 f a a c b 9 ]   2 0 2 5 - 0 5 - 2 4   � � �   M e r g e d   ' r e s p o n s e i b l e   u s e   g u i d e '   d r a f t .  
- -   [ f 1 f 9 d d 8 ]   2 0 2 5 - 0 5 - 2 4   � � �   A d d   r e s p o n s i b l e   u s e   g u i d e  
- -   [ f c 0 b 4 b b ]   2 0 2 5 - 0 5 - 2 4   � � �   M e r g e d   b a s i c   C L I   d r a f t   -   t h i s   w i l l   c h a n g e   l a t e r  
- -   [ 5 5 8 1 b 9 8 ]   2 0 2 5 - 0 5 - 2 4   � � �   A d d   s c a f f o l d i n g   C L I   a n d   u s a g e   d o c s  
- -   [ 3 f c f 5 f 4 ]   2 0 2 5 - 0 5 - 2 4   � � �   U p d a t e   P R O M P T S . m d  
- -   [ d 6 2 8 c f d ]   2 0 2 5 - 0 5 - 2 4   � � �   M e r g e d   a d d e d   p r o m p e t   e x a m p l e s  
- -   [ 9 8 9 d 8 b a ]   2 0 2 5 - 0 5 - 2 4   � � �   A d d   p r o m p t   e x a m p l e s   a n d   u p d a t e   d o c s  
- -   [ 1 4 2 f 9 6 d ]   2 0 2 5 - 0 5 - 2 4   � � �   U p d a t e   A G E N T S . m d  
- -   [ a 2 f e 1 c 8 ]   2 0 2 5 - 0 5 - 2 4   � � �   U p d a t e   p r o g r e s s . m d  
- -   [ 1 b 9 4 8 e 4 ]   2 0 2 5 - 0 5 - 2 4   � � �   U p d a t e   R E A D M E . m d  
- -   [ 6 0 6 7 b 4 b ]   2 0 2 5 - 0 5 - 2 4   � � �   I n t r o d u c e   s p a c e   f o r   p r o c e s s e s   i n   c o d e x   f o l d e r   -   d r a f t e d   c o d e x / p r o c e s s . m d  
- -   [ b 1 8 8 d e 0 ]   2 0 2 5 - 0 5 - 2 4   � � �   A d d   c o n t e x t   i m p o r t a n c e   s t u b   f o r   f i l e   r e l e v a n c e   d i s c u s s i o n  
- -   [ a f c 5 c 9 9 ]   2 0 2 5 - 0 5 - 2 4   � � �   M e r g e d   d i r e c t i o n   a n d   r o l e s   c h e c k   f r o m   C o d e x  
- -   [ 3 6 0 5 8 f 0 ]   2 0 2 5 - 0 5 - 2 4   � � �   L o g   r e v i e w   o f   d i r e c t i o n   a n d   r o l e s  
- -   [ 8 c 9 b 7 c 7 ]   2 0 2 5 - 0 5 - 2 4   � � �   M e r g e   c o d e x   w o r k   o n   o n b o a r d i n g   g u i d e   d o c s / O N B O A R D I N G . m d  
- -   [ c 9 4 9 5 4 2 ]   2 0 2 5 - 0 5 - 2 4   � � �   A d d   o n b o a r d i n g   g u i d e  
- -   [ 9 c d 2 4 6 1 ]   2 0 2 5 - 0 5 - 2 4   � � �   M e r g e :   A d d e d   p r o j e c t   o v e r v i e w   a n d   c l a r i f i e d   p u r p o s e   i n   R E A D M E  
- -   [ 8 2 3 4 2 8 5 ]   2 0 2 5 - 0 5 - 2 4   � � �   U p d a t e   R E A D M E   w i t h   p r o j e c t   o v e r v i e w  
- -   [ 9 7 8 8 5 5 3 ]   2 0 2 5 - 0 5 - 2 3   � � �   U p d a t e   R E A D M E . m d   w i t h   a   D i s c l a i m e r  
- -   [ c 8 d 9 4 b 1 ]   2 0 2 5 - 0 5 - 2 3   � � �   C r e a t e   R E A D M E . m d  
- -   [ 1 0 3 e 2 a f ]   2 0 2 5 - 0 5 - 2 3   � � �   C r e a t e   L I C E N S E . l i c  
- -   [ d 9 8 c 7 3 f ]   2 0 2 5 - 0 5 - 2 2   � � �   C o d e x - M e r g e :   M o d u l a r i z e   a g e n t   r o l e s   a n d   a d d   n e w   t e a m   m e m b e r s  
- -   [ b c 1 8 0 d 9 ]   2 0 2 5 - 0 5 - 2 2   � � �   M o d u l a r i z e   a g e n t   r o l e s   a n d   a d d   n e w   t e a m   m e m b e r s  
- -   [ d 3 e 8 7 e 4 ]   2 0 2 5 - 0 5 - 2 2   � � �   A d d e d   n e w   a g e n t   r o l e   " V e r s i o n A g e n t "   a n d   c r e a t e d   a   d i r e c t i o n . m d   f o r   c o d e x - h i v e  
- -   [ 4 c 2 d 7 7 2 ]   2 0 2 5 - 0 5 - 2 2   � � �   f i r s t   c o m m i t  
- 
 ```
 
 // File: package-lock.json
@@ -1346,7 +1225,9 @@ if (process.argv[1] === __filename) {
     "": {
       "name": "codex-hive",
       "version": "0.1.0",
+      "license": "UNLICENSED",
       "devDependencies": {
+        "dump-for-context": "^1.0.2",
         "vitest": "^3.1.4"
       }
     },
@@ -1581,6 +1462,16 @@ if (process.argv[1] === __filename) {
       "license": "MIT",
       "engines": {
         "node": ">=6"
+      }
+    },
+    "node_modules/dump-for-context": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/dump-for-context/-/dump-for-context-1.0.2.tgz",
+      "integrity": "sha512-LeU8/TcYdq/auhKxP7Th943ugiR9mGaOYPYKEzU3WlYW7sAmUJl6W5U1I1Tkx687vNAP8QqrbvSmDUGZbuuPmA==",
+      "dev": true,
+      "license": "Unlicense",
+      "bin": {
+        "dump-for-context": "bin/dump-for-context.js"
       }
     },
     "node_modules/es-module-lexer": {
@@ -2108,12 +1999,13 @@ if (process.argv[1] === __filename) {
   },
   "scripts": {
     "test": "vitest run",
-    "context:dump": "node dump-context.js"
+    "dump": "dump-for-context"
   },
   "author": "Technikhighknee",
   "license": "UNLICENSED",
   "type": "module",
   "devDependencies": {
+    "dump-for-context": "^1.0.2",
     "vitest": "^3.1.4"
   }
 }
