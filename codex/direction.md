@@ -11,8 +11,8 @@ a way to create new projects with Codex that are intentional, traceable, and rol
 * Provide a complete environment for Codex to act not as a tool, but as a team  
 * Define structure, expectations, roles, and boundaries for any agent-led system  
 * Offer guidance for humans: how to prompt, how to lead, how to stay aware  
-* Make project creation repeatable, safe, and grounded in transparent thinking  
-* Enable CLI-assisted workflows for creating and managing Codex-led repositories
+* Make project creation repeatable, safe, and grounded in transparent thinking
+* Provide an npm-based CLI for creating and managing Codex-led repositories
 
 ---
 
@@ -39,11 +39,10 @@ It guides what will.
    - Curated prompt examples for interacting with Codex responsibly
    - Prompts that activate roles, enforce limits, or trigger reflection
 
-3. **CLI Tooling**
-   - Scripts for initializing new Codex-ready repositories
-   - Two modes:
-     - **Interactive**: answer questions about the system → generates direction.md
-     - **Fast**: use a config or template to scaffold everything
+3. **Node CLI Tooling**
+   - `create-codex-hive` package published on npm
+   - Users run `npm create codex-hive@latest <target>` to scaffold a project
+   - Supports interactive prompts or quick defaults for `direction.md`
 
 4. **Safety Infrastructure**
    - Guidelines and constraints that prevent unreviewed or dangerous commits

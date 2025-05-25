@@ -27,3 +27,4 @@
 - [added] dump-context.js – script to generate repository context dump
 - [added] test/dump-context.test.js – verifies context dump output
 - [added] package.json – npm initialization for context script
+- [updated] codex/direction.md – replaced shell CLI section with npm-based approach
