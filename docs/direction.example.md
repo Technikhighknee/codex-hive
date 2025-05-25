@@ -1,3 +1,7 @@
+<!--
+   NOTE FOR AGENTS: THIS IN AN EXAMPLE FILE
+-->
+
 # keeper – Direction
 
 This document outlines the current direction of the `keeper` project.  
