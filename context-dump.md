@@ -184,6 +184,11 @@ Refer to `docs/WORKFLOW.md` for the typical flow of tasks.
 
 ```
 
+// File: TODO.md
+```md
+- Add to documentation: 'The codex/agent container must run \'npm install\' in it's start-script' 
+```
+
 // File: cli/init.sh
 ```bash
 #!/usr/bin/env bash
@@ -530,36 +535,45 @@ If Guardian approves:
 
 // File: codex/progress.md
 ```md
-- [modified] AGENTS configuration – modularized role files and introduced Frontman, Guardian, Planner
+# SCHEMA
+[player] [action] [DOMAIN or FILE] – [message]
+
+# Progress-Log
+- [codex] [modified] AGENTS configuration – modularized role files and introduced Frontman, Guardian, Planner
 ---
-- [updated] README.md – replaced placeholder text with project overview
+- [codex] [updated] README.md – replaced placeholder text with project overview
 --- 
-- [added] docs/ONBOARDING.md – onboarding instructions for new projects
-- [updated] README.md – linked onboarding guide
+- [codex] [added] docs/ONBOARDING.md – onboarding instructions for new projects
+- [codex] [updated] README.md – linked onboarding guide
 ---
-- [reviewed] codex/direction.md – still aligned with repository goals
-- [reviewed] codex/roles/ – definitions adequate
+- [codex] [reviewed] codex/direction.md – still aligned with repository goals
+- [codex] [reviewed] codex/roles/ – definitions adequate
 ---
-- [added] docs/PROMPTS.md – sample role activation prompts
-- [updated] README.md – referenced PROMPTS guide
+- [codex] [added] docs/PROMPTS.md – sample role activation prompts
+- [codex] [updated] README.md – referenced PROMPTS guide
 ---
-- [added] cli/init.sh – minimal script to scaffold new Codex projects
-- [added] docs/CLI_INIT.md – usage guide for the init script
-- [updated] README.md – added Quick Start section referencing CLI guide
+- [codex] [added] cli/init.sh – minimal script to scaffold new Codex projects
+- [codex] [added] docs/CLI_INIT.md – usage guide for the init script
+- [codex] [updated] README.md – added Quick Start section referencing CLI guide
 ---
-- [added] docs/RESPONSIBLE_USE.md – guidance on safe and responsible use
-- [updated] README.md – linked responsible use guide
+- [codex] [added] docs/RESPONSIBLE_USE.md – guidance on safe and responsible use
+- [codex] [updated] README.md – linked responsible use guide
 ---
-- [added] docs/ROLES_OVERVIEW.md – summarized purpose of each agent
-- [updated] README.md – listed roles overview doc
+- [codex] [added] docs/ROLES_OVERVIEW.md – summarized purpose of each agent
+- [codex] [updated] README.md – listed roles overview doc
 ---
-- [added] docs/WORKFLOW.md – summarized typical process
-- [updated] README.md – linked workflow guide
+- [codex] [added] docs/WORKFLOW.md – summarized typical process
+- [codex] [updated] README.md – linked workflow guide
 ---
-- [added] dump-context.js – script to generate repository context dump
-- [added] test/dump-context.test.js – verifies context dump output
-- [added] package.json – npm initialization for context script
-- [updated] codex/direction.md – replaced shell CLI section with npm-based approach
+- [codex] [added] dump-context.js – script to generate repository context dump
+- [codex] [added] test/dump-context.test.js – verifies context dump output
+- [codex] [added] package.json – npm initialization for context script
+- [codex] [updated] codex/direction.md – replaced shell CLI section with npm-based approach
+---
+- [human] [refactored] dump-context.js – improved general maintain- & readablity
+- [human] [refactored] dump-context.js – outputFile, ignoredDirs and languageMap:{extention:markdown-code-name} are easier passable and configurable
+- [human] [refactored] dump-context.js – replaced line checks with block-level parsing in tests 
+- [human] [improved] dump-context.test.js – cleaner test structure, validates all blocks
 ```
 
 // File: codex/roles/api-layer.md
@@ -1218,7 +1232,12 @@ if (process.argv[1] === __filename) {
 
 // File: git-history-dump.md
 ```md
-��-   [ 0 f 9 d 0 0 2 ]   2 0 2 5 - 0 5 - 2 5   � � �   U p d a t e   W O R K F L O W . m d  
+��< ! - -  
+     T O D O :   A d d   d u m p - g i t - h i s t o r y   a n d   d u m p - a l l   ( o r   s i m i l a r )   s c r i p t s  
+     ' g i t   l o g   - - p r e t t y = f o r m a t : " -   [ % h ]   % a d   -   % s "   - - d a t e = s h o r t   >   g i t - h i s t o r y - d u m p . m d '   w a s   u s e d   f o r   t h i s  
+ - - >  
+  
+ -   [ 0 f 9 d 0 0 2 ]   2 0 2 5 - 0 5 - 2 5   � � �   U p d a t e   W O R K F L O W . m d  
  -   [ 3 7 c e b d e ]   2 0 2 5 - 0 5 - 2 5   � � �   A d d   N o t e   f o r   a g e n t s   i n   d o c s / d i r e c t i o n . e x a m p l e . m d  
  -   [ 5 8 3 6 1 2 b ]   2 0 2 5 - 0 5 - 2 5   � � �   U p d a t e   p a c k a g e . j s o n  
  -   [ a 8 2 4 2 a 3 ]   2 0 2 5 - 0 5 - 2 5   � � �   M e r g e   u p d a t e   o f   d i r e c t i o n . m d   t o   u s e   n p m   c r e a t e   w h e n   s c a f f o l d i n g  
