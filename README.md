@@ -1,3 +1,9 @@
+# Note
+
+I am currently working on 'hive' to.  
+This might stagnate for a while.  
+\- th
+
 # codex-hive - WIP
 
 A starter environment for building **role-aware** systems with OpenAI Codex. This repository contains the structure, policies, and documentation needed to spin up a new project where Codex operates as a team of agents.
