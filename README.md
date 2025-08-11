@@ -1,6 +1,6 @@
 # Note
 
-I am currently working on 'hive' to.  
+I am currently working on 'hive'.  
 This might stagnate for a while.  
 \- th
 
