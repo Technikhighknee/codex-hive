@@ -1,8 +1,8 @@
-# Note
-
-I am currently working on 'hive'.  
-This might stagnate for a while.  
-\- th
+# Note  
+The code does not work (or does anything other than creating directories.  
+I am not finishing _this_.    
+Some Docs files might be confusing.  
+Been a while  since I looked into it; could not bring myself to deleting this repo :D  
 
 # codex-hive - WIP
 
